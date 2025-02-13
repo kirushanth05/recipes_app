@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
+import 'package:recipe_app/components/custom_drawer.dart';
 import 'package:recipe_app/components/custom_grid.dart';
 import 'package:recipe_app/components/recipe_card.dart';
 import 'package:recipe_app/models/food.dart';
@@ -16,15 +16,31 @@ class FoodRecipesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      drawer: const CustomDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SafeArea(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              foodCategory.title,
-              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  foodCategory.title,
+                  style: const TextStyle(
+                      fontSize: 32, fontWeight: FontWeight.w700),
+                ),
+                const Gap(8),
+                Builder(builder: (context) {
+                  return IconButton(
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                    icon: Icon(Icons.menu),
+                  );
+                })
+              ],
             ),
             // const Gap(4),
             CustomGrid(
