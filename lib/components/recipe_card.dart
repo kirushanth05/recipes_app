@@ -54,14 +54,15 @@ class RecipeCard extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const Text(
-                    'Duration: 30 mins',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      // fontWeight: FontWeight.w700,
+                  if (food.duration != null)
+                    Text(
+                      'Duration: ${food.duration} mins',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        // fontWeight: FontWeight.w700,
+                      ),
                     ),
-                  ),
                   // if (food.description != null)
                   //   Expanded(
                   //     child: Text(

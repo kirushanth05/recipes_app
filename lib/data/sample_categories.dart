@@ -11,6 +11,7 @@ final List<FoodCategory> foodCategories = [
       Food(
         name: 'Noodles',
         procedure: ['Boil water', 'Boil noodles', 'Add sauce', 'Serve hot'],
+        duration: 2,
         imageUrl:
             'https://bebraveandbloom.com/wp-content/uploads/2022/04/chinese-lo-mein-noodles-recipe-tasty-1.jpg',
         description:
@@ -265,7 +266,10 @@ final List<FoodCategory> foodCategories = [
     availableRecipe: [
       Food(
           name: 'Paella',
-          procedure: ['Cook rice with saffron', 'Add seafood and chicken']),
+          duration: 10,
+          procedure: ['Cook rice with saffron', 'Add seafood and chicken'],
+          description:
+              'Paella is a Spanish rice dish originally from Valencia. It is one of the best-known dishes in Spanish cuisine. For this reason, many non-Spaniards view it as Spain\'s national dish, but Spaniards almost unanimously consider it to be a dish from the Valencian region. The dish is widely regarded as Spain\'s national dish, as well as a regional Valencian dish; Valencians regard paella as one of their identifying symbols.'),
       Food(
           name: 'Gazpacho',
           procedure: ['Blend tomatoes and peppers', 'Serve chilled']),

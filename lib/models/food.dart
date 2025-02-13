@@ -2,6 +2,7 @@ class Food {
   final String name;
   final String? description;
   final String? imageUrl;
+  bool isFavorite;
 
   /// steps to produce the meal
   final List<String> procedure;
@@ -15,5 +16,6 @@ class Food {
     required this.procedure,
     this.description,
     this.imageUrl,
+    this.isFavorite = false,
   });
 }
